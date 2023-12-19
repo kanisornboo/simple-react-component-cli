@@ -12,14 +12,20 @@ To install the necessary dependencies, run the following command:
 npm install
 ```
 
+## Make cli.js executable
+
+````bash
+    chmod +x main.js
+```
+
 ## Usage
 
 To use the CLI, run the following command:
 
 ```bash
-./cli.js YourComponentName
+./bash.js YourComponentName
 
-```
+````
 
 ## Notes
 

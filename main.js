@@ -27,7 +27,7 @@ program
     generateTemplateFile(templateFiles, componentName, componentPath);
 
     console.log(
-      chalker`<blue> ✌️✌️✌️ React component '${componentName}' created successfully at ${componentPath} ✌️✌️✌️</blue>`
+      chalker`<blue> 🚀🚀🚀 React component '${componentName}' created successfully at ${componentPath} 🚀🚀🚀</blue>`
     );
   });
 
