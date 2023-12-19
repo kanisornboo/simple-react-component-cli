@@ -42,5 +42,3 @@ program
   });
 
 program.parse(process.argv);
-
-console.log(`You have successfully create: ${program.opts().cheese}`);
