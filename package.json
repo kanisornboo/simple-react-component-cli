@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalker": "^1.2.0",
     "commander": "^11.1.0",
     "fs-extra": "^11.2.0"
   },

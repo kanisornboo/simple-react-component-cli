@@ -2,6 +2,7 @@
 const fs = require("fs-extra");
 const path = require("path");
 const program = require("commander");
+const chalker = require("chalker");
 
 const TEMPLATES_DIR = path.join(__dirname, "templates");
 
@@ -33,12 +34,13 @@ program
       try {
         fs.copySync(templatePath, destinationPath);
       } catch (err) {
-        console.error(`Failed to copy file: ${err}`);
+        console.log(chalker`<red>Failed to copy file: ${err}</red>`);
         process.exit(1);
       }
     });
-
-    console.log(`React component '${componentName}' created successfully at ${componentPath}`);
+    console.log(
+      chalker`<blue> ✌️✌️✌️ React component '${componentName}' created successfully at ${componentPath} ✌️✌️✌️</blue>`
+    );
   });
 
 program.parse(process.argv);
