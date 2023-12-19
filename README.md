@@ -20,3 +20,7 @@ To use the CLI, run the following command:
 ./cli.js YourComponentName
 
 ```
+
+## Notes
+
+The line #!/usr/bin/env node at the top of your JavaScript file is called a shebang. This line tells the system that this script should be executed using Node.js.
