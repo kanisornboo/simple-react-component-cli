@@ -6,8 +6,9 @@ const program = require("commander");
 const chalker = require("chalker");
 
 program
+  .name("create-react-component")
   .version("0.0.1")
-  .description("Create a React component template")
+  .description("A CLI tool to generate React components")
   .arguments("<componentName>")
   .action((componentName) => {
     const componentPath = path.join("Components", componentName);
