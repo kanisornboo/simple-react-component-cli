@@ -1,10 +1,9 @@
 #!/usr/bin/env node
+const generateTemplateFile = require("./utils/index");
 const fs = require("fs-extra");
 const path = require("path");
 const program = require("commander");
 const chalker = require("chalker");
-
-const TEMPLATES_DIR = path.join(__dirname, "templates");
 
 program
   .version("0.0.1")
@@ -24,20 +23,8 @@ program
     // Create the component files
     const templateFiles = ["MyComponent.tsx", "text.ts", "useCustomHook.tsx"];
 
-    templateFiles.forEach((file) => {
-      const templatePath = path.join(TEMPLATES_DIR, file);
+    generateTemplateFile(templateFiles, componentName, componentPath);
 
-      // name the destination file based on the component name
-      file = file.replace("MyComponent", componentName);
-
-      const destinationPath = path.join(componentPath, file);
-      try {
-        fs.copySync(templatePath, destinationPath);
-      } catch (err) {
-        console.log(chalker`<red>Failed to copy file: ${err}</red>`);
-        process.exit(1);
-      }
-    });
     console.log(
       chalker`<blue> ✌️✌️✌️ React component '${componentName}' created successfully at ${componentPath} ✌️✌️✌️</blue>`
     );
