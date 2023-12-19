@@ -11,3 +11,12 @@ To install the necessary dependencies, run the following command:
 ```bash
 npm install
 ```
+
+## Usage
+
+To use the CLI, run the following command:
+
+```bash
+./cli.js YourComponentName
+
+```

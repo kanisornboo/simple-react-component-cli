@@ -6,7 +6,7 @@ const program = require("commander");
 const TEMPLATES_DIR = path.join(__dirname, "templates");
 
 program
-  .version("1.0.0")
+  .version("0.0.1")
   .description("Create a React component template")
   .arguments("<componentName>")
   .action((componentName) => {
@@ -42,3 +42,5 @@ program
   });
 
 program.parse(process.argv);
+
+console.log(`You have successfully create: ${program.opts().cheese}`);
